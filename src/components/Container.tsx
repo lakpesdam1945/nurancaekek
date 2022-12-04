@@ -21,8 +21,8 @@ function Container(propsIn: ContainerProps) {
   return (
     <>
       <div
-        className={`mx-auto w-full max-w-mobile ${props.padding} ${
-          props.background ?? "bg-white"
+        className={`mx-auto  w-full max-w-mobile ${props.padding} ${
+          props.background ?? ""
         }`}
       >
         {props.children}

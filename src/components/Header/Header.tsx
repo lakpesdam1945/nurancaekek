@@ -19,7 +19,7 @@ function Header(propsIn: HeaderProps) {
       <div
         className={`flex items-center justify-between w-full fixed z-50 max-w-mobile`}
       >
-        <Container padding="px-4 py-4" background={backgroundList.dark}>
+        <Container padding="px-4 py-4" background={backgroundList.primary}>
           <div className="flex flex-col justify-start items-start">
             <div className="flex flex-row justify-between w-full">
               <div className="flex">
