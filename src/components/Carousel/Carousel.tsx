@@ -13,11 +13,16 @@ interface Carousel {
 
 function Carousel(props: Props) {
   const [datacarousel, setDataCarousel] = useState([]);
+
+  const getData = async () => {
+    const res = await fetch("https://mwcjson.vercel.app/warta");
+    const data = await res.json();
+    console.log(data);
+    setDataCarousel(data);
+  };
+
   useEffect(() => {
-    fetch("https://mwcjson.vercel.app/warta")
-      .then((res) => res.json())
-      .then((res) => setDataCarousel(res))
-      .catch((err) => console.log(err));
+    getData();
   }, []);
 
   return (
@@ -48,7 +53,7 @@ function Carousel(props: Props) {
         </div>
         <div className="carousel-inner relative w-full overflow-hidden rounded-lg">
           <div className="carousel-item active relative float-left w-full h-[200px]">
-            <div className="h-full w-full bg-black/20 absolute"></div>
+            <div className="h-full w-full bg-black/10 absolute"></div>
             <img
               src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
               className="w-full h-full object-cover bg-cover"
@@ -63,7 +68,7 @@ function Carousel(props: Props) {
               key={data.id}
               className="carousel-item relative float-left w-full h-[200px]"
             >
-              <div className="h-full w-full bg-black/20 absolute"></div>
+              <div className="h-full w-full bg-black/10 absolute"></div>
               <img
                 src={`/${data.image}`}
                 className="w-full h-full object-cover bg-cover"
