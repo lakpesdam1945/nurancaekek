@@ -31,13 +31,18 @@ export default defineConfig({
           }),
         ],
       },
-      includeAssets: ["icon-192x192.png", "icon-512x512.png"],
+      includeAssets: ["icon-192x192.png", "icon-512x512.png", "nu.jpg"],
       manifest: {
         name: "NU RANCAEKEK",
         short_name: "NU RANCAEKEK",
         description: "Majelis Wakil Cabang Nahdlatul Ulama Kecamatan Rancaekek",
         theme_color: "#ffffff",
         icons: [
+          {
+            src: "nu.jpg",
+            sizes: "512x512",
+            type: "image/jpg",
+          },
           {
             src: "icon-192x192.png",
             sizes: "192x192",

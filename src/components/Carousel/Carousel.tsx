@@ -55,7 +55,7 @@ function Carousel(props: Props) {
           <div className="carousel-item active relative float-left w-full h-[200px]">
             <div className="h-full w-full bg-black/10 absolute"></div>
             <img
-              src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
+              src={`/nu.jpg`}
               className="w-full h-full object-cover bg-cover"
               alt="image"
             />
