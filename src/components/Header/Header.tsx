@@ -1,8 +1,9 @@
 import { backgroundList, Container } from "../Container";
 import { Theme } from "../Theme";
 import { NavLink } from "react-router-dom";
-import { IoOptions, IoSearchOutline } from "react-icons/io5";
+import { IoOptions, IoSearch, IoSearchOutline } from "react-icons/io5";
 import { useState } from "react";
+
 interface HeaderProps {
   theme?: Theme;
   children?: React.ReactNode;
@@ -13,6 +14,11 @@ function Header(propsIn: HeaderProps) {
   const [toggle, setToggle] = useState(false);
   function handleToggle() {
     setToggle(!toggle);
+  }
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    alert("ITS WORK");
   }
   return (
     <>
@@ -68,16 +74,29 @@ function Header(propsIn: HeaderProps) {
                       isActive ? "text-yellow-600 font-medium" : "text-neutral"
                     }
                   >
-                    <span className="text-sm" onClick={handleToggle}>
-                      Tokoh
-                    </span>
+                    <span className="text-sm">Tokoh</span>
                   </NavLink>
                 </li>
               </ul>
             </div>
 
             <div className={`py-2 w-full ${toggle ? "flex" : "hidden"}`}>
-              <input type="text" className="w-full" />
+              <form
+                className="w-full flex items-center justify-between gap-2"
+                onSubmit={handleSubmit}
+              >
+                <div className="w-10/12">
+                  <input
+                    type="text"
+                    className="form-control w-full block px-3 py-1.5 text-base  font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out  m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  />
+                </div>
+                <div className="w-2/12 h-full">
+                  <button className="flex rounded-md bg-dark items-center h-full w-full justify-center">
+                    <IoSearch className="text-neutral text-center" />
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </Container>

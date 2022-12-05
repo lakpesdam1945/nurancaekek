@@ -17,7 +17,6 @@ function Carousel(props: Props) {
   const getData = async () => {
     const res = await fetch("https://mwcjson.vercel.app/warta");
     const data = await res.json();
-    console.log(data);
     setDataCarousel(data);
   };
 

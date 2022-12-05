@@ -40,7 +40,7 @@ export default defineConfig({
         icons: [
           {
             src: "nu.jpg",
-            sizes: "512x512",
+            sizes: "1024x1024",
             type: "image/jpg",
           },
           {

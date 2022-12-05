@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Layout>
-        <Container background={backgroundList.neutral}>
+        <Container>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/warta" element={<Home />}></Route>

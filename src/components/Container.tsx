@@ -22,7 +22,7 @@ function Container(propsIn: ContainerProps) {
     <>
       <div
         className={`mx-auto  w-full max-w-mobile ${props.padding} ${
-          props.background ?? ""
+          props.background ?? "bg-white"
         }`}
       >
         {props.children}
