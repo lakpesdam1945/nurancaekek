@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: [
     "./index.html",
@@ -35,5 +36,29 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tw-elements/dist/plugin"), require("@tailwindcss/forms")],
+  plugins: [
+    plugin(({ addBase, theme }) => {
+      addBase({
+        ".scrollbar": {
+          overflowY: "auto",
+          scrollbarColor: `${theme("colors.emerald.900")} ${theme(
+            "colors.emerald.200"
+          )}`,
+          scrollbarWidth: "thin",
+        },
+        ".scrollbar::-webkit-scrollbar": {
+          height: "2px",
+          width: "2px",
+        },
+        ".scrollbar::-webkit-scrollbar-thumb": {
+          backgroundColor: theme("colors.emerald.900"),
+        },
+        ".scrollbar::-webkit-scrollbar-track-piece": {
+          backgroundColor: theme("colors.slate.400"),
+        },
+      });
+    }),
+    require("tw-elements/dist/plugin"),
+    require("@tailwindcss/forms"),
+  ],
 };

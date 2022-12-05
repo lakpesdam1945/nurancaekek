@@ -74,7 +74,9 @@ function Header(propsIn: HeaderProps) {
                       isActive ? "text-yellow-600 font-medium" : "text-neutral"
                     }
                   >
-                    <span className="text-sm">Tokoh</span>
+                    <span className="text-sm" onClick={handleToggle}>
+                      Tokoh
+                    </span>
                   </NavLink>
                 </li>
               </ul>

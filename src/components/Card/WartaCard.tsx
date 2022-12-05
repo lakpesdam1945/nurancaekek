@@ -24,7 +24,7 @@ function WartaCard() {
   }, []);
   return (
     <>
-      <div className="w-full h-[210px] flex flex-row gap-4 overflow-auto snap-mandatory snap-x ">
+      <div className="w-full h-[210px] flex flex-row gap-4 overflow-auto snap-mandatory snap-x scrollbar">
         {warta.map((data: Warta) => (
           <div
             key={data.id}
