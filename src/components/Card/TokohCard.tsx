@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IoChevronForward } from "react-icons/io5";
 import { Theme } from "../Theme";
 
 interface TokohCard {
@@ -30,24 +31,29 @@ function TokohCard() {
 
   return (
     <>
-      <div className="flex flex-col w-full gap-2">
+      <div className="flex flex-col items-center justify-between w-full gap-2">
         {tokoh.map((data: TokohCard) => (
           <div
-            className="flex flex-row gap-2 w-full p-2 bg-neutral shadow-md h-24 rounded-md items-center overflow-hidden relative "
+            className="flex items-center justify-between p-2 bg-neutral shadow-md w-full h-24 rounded-md gap-2"
             key={data.id}
           >
-            <div className="h-20 w-4/12 overflow-hidden relative rounded-md">
+            <div className="flex h-20 w-3/12 overflow-hidden relative rounded-md">
               <img
                 src={data.image}
                 alt={data.title}
                 className="object-cover bg-cover w-full h-full"
               />
             </div>
-            <div className="flex flex-col w-8/12  items-start justify-start">
+            <div className="flex flex-col w-8/12 h-20 justify-center">
               <h3 className="font-semibold text-sm text-dark">{data.title}</h3>
               <p className="text-xs leading-relaxed font-light line-clamp-2">
                 {data.body}
               </p>
+            </div>
+            <div className="flex flex-row w-1/12 h-20 items-center justify-end">
+              <span className="flex items-center">
+                <IoChevronForward className="text-dark h-5 w-5" />
+              </span>
             </div>
           </div>
         ))}
