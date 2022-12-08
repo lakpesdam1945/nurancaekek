@@ -1,7 +1,10 @@
+import { Theme } from "./Theme";
+
 interface ContainerProps {
   padding?: string;
   margin?: string;
   children?: React.ReactNode;
+  background?: Theme;
 }
 
 const defaultContainerProps = {

@@ -1,8 +1,8 @@
-import { backgroundList, Container } from "../Container";
 import { Theme } from "../Theme";
 import { NavLink } from "react-router-dom";
 import { IoOptions, IoSearch, IoSearchOutline } from "react-icons/io5";
 import { useState } from "react";
+import { Container } from "../Container";
 
 interface HeaderProps {
   theme?: Theme;
@@ -25,7 +25,7 @@ function Header(propsIn: HeaderProps) {
       <div
         className={`flex items-center justify-between w-full fixed z-50 max-w-tablet`}
       >
-        <Container padding="px-4 py-4" background={backgroundList.primary}>
+        <Container padding="px-4 py-4" background={Theme.primary}>
           <div className="flex flex-col justify-start items-start">
             <div className="flex flex-row justify-between w-full">
               <div className="flex">

@@ -1,10 +1,8 @@
 import { IoChevronForward } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { Theme } from "../components/Theme";
-import { backgroundList } from "./Container";
 type SeparatorsContentProps = {
   title?: string;
-  theme?: backgroundList;
   ButtonIconLink?: string;
 };
 
