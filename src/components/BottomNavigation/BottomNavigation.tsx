@@ -12,7 +12,7 @@ type Props = {};
 function BottomNavigation(props: Props) {
   return (
     <>
-      <div className="flex bottom-0 max-w-mobile bg-dark fixed z-50 w-full">
+      <div className="flex bottom-0 max-w-tablet bg-dark fixed z-50 w-full">
         <Container padding="p-4" background={backgroundList.primary}>
           <ul className="flex gap-4 items-center justify-between">
             <li>

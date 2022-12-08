@@ -1,29 +1,21 @@
-enum backgroundList {
-  "primary" = "bg-primary",
-  "dark" = "bg-dark",
-  "neutral" = "bg-neutral",
-}
-
 interface ContainerProps {
   padding?: string;
-  background?: backgroundList;
+  margin?: string;
   children?: React.ReactNode;
 }
 
 const defaultContainerProps = {
   children: <div>Container</div>,
-  padding: "",
+  padding: null,
+  margin: null,
 };
 
 function Container(propsIn: ContainerProps) {
   const props = { ...defaultContainerProps, ...propsIn };
-
   return (
     <>
       <div
-        className={`mx-auto  w-full max-w-mobile ${props.padding} ${
-          props.background ?? "bg-white"
-        }`}
+        className={`mx-auto w-full max-w-tablet h-auto   ${props.padding} ${props.margin} bg-light text-dark dark:bg-dark dark:text-light`}
       >
         {props.children}
       </div>
@@ -31,4 +23,4 @@ function Container(propsIn: ContainerProps) {
   );
 }
 
-export { Container, backgroundList };
+export { Container };

@@ -34,7 +34,7 @@ function TokohCard() {
       <div className="flex flex-col items-center justify-between w-full gap-2">
         {tokoh.map((data: TokohCard) => (
           <div
-            className="flex items-center justify-between p-2 bg-neutral shadow-md w-full h-24 rounded-md gap-2"
+            className="flex items-center justify-between p-2 bg-neutral shadow-md w-full h-24 rounded-md gap-2 hover:bg-white focus:bg-white"
             key={data.id}
           >
             <div className="flex h-20 w-3/12 overflow-hidden relative rounded-md">

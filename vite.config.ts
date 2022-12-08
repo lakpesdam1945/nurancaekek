@@ -22,6 +22,9 @@ export default defineConfig({
     VitePWA({
       injectRegister: "auto",
       registerType: "autoUpdate",
+      devOptions: {
+        enabled: false,
+      },
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
         runtimeCaching: [
@@ -31,7 +34,7 @@ export default defineConfig({
           }),
         ],
       },
-      includeAssets: ["icon-192x192.png", "icon-512x512.png", "nu.jpg"],
+      includeAssets: ["icon-192x192.png", "icon-512x512.png", "nu.webp"],
       manifest: {
         name: "NU RANCAEKEK",
         short_name: "NU RANCAEKEK",
@@ -39,25 +42,27 @@ export default defineConfig({
         theme_color: "#ffffff",
         icons: [
           {
-            src: "nu.jpg",
-            sizes: "1024x1024",
-            type: "image/jpg",
+            src: "nu.webp",
+            sizes: "1025x1025",
+            type: "image/webp",
           },
           {
             src: "icon-192x192.png",
             sizes: "192x192",
             type: "image/png",
+            purpose: "any",
           },
           {
             src: "icon-512x512.png",
             sizes: "512x512",
             type: "image/png",
+            purpose: "any",
           },
           {
             src: "icon-512x512.png",
             sizes: "512x512",
             type: "image/png",
-            purpose: "any maskable",
+            purpose: "any",
           },
         ],
       },

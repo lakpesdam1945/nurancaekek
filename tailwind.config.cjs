@@ -2,6 +2,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 module.exports = {
+  darkMode: "class",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -27,8 +28,9 @@ module.exports = {
     extend: {
       colors: {
         primary: "#0E453C",
-        dark: "#0F172A",
-        neutral: "#F8FAFC",
+        dark: "#111827",
+        light: "#F9FAFB",
+        accent: "#FCD34D",
       },
       fontFamily: {
         display: ["'Leckerli One'"],
