@@ -16,7 +16,7 @@ export default function Layout(propsIn: Props) {
   return (
     <>
       <div
-        className={`w-full max-w-tablet mx-auto min-h-screen bg-light dark:bg-dark text-light dark:text-dark`}
+        className={`w-full min-h-screen max-w-tablet mx-auto bg-light dark:bg-dark text-light dark:text-dark`}
       >
         {props.children}
       </div>

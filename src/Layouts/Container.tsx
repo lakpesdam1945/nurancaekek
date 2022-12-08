@@ -15,7 +15,7 @@ const defaultContainerProps = {
   fixed: false,
   borderBottom: false,
   borderTop: false,
-  position: null,
+  position: "",
 };
 
 function Container(propsIn: ContainerProps) {
@@ -25,14 +25,14 @@ function Container(propsIn: ContainerProps) {
       <div
         className={`mx-auto w-full max-w-tablet h-auto ${props.padding} ${
           props.margin
-        } ${props.fixed ? "z-50 fixed" : null} ${
+        } ${props.fixed ? "z-50 fixed" : ""} ${
+          props.position ? props.position + "-0" : ""
+        } ${
           props.borderTop ? "border-t-[1px] border-dark dark:border-light" : ""
         } ${
           props.borderBottom
             ? "border-b-[1px] border-dark dark:border-light"
             : ""
-        } ${
-          props.position ? props.position + "-0" : ""
         } bg-light text-dark dark:bg-dark dark:text-light`}
       >
         {props.children}
